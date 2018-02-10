@@ -1,4 +1,4 @@
-#!/Users/zkinc/Desktop/Python/LXFPython/awesome-python3-webapp/venv/bin/python
+#!/Users/zkinc/Documents/GitHub/awesome-python3-webapp/venv/bin/python
 
 import sys
 import getopt
