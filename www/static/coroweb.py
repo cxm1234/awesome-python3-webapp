@@ -10,7 +10,7 @@ def get(path):
     def decorator(func):
         @functools.wraps(func)
         def wrapper(*args,**kw):
-            return func(*args,**kw):
+            return func(*args,**kw)
         wrapper.__method__='GET'
         wrapper.__route__=path
         return wrapper
@@ -39,5 +39,12 @@ def get(path):
         params = inspect.signature(fn).parameters
         for name,param in params.items():
            if param.kind == inspect.Parameter.KEYWORD_ONLY:
+               args.append(name)
+        return tuple(args)
+    
+    def has_named_kw_args(fn):
+        params = inspect.signature(fn).parameters
+        for name,param in params.items():
+            if param.kind == inspect.Parameter.KEYWORD_ONLY
                
 
